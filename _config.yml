@@ -1,11 +1,8 @@
 title: HDJekyll
-subtitle: "The official home of Roy Stewart's work"
 email: roythomasstewart@gmail.com
-description: >-
-  This the the official site for all of Roy Stewart's works.
-  Here you can find blog articles, project information, and much more.
+description: A clean and minimalist theme for Jekyll.
 baseurl: ""
-url: "http://hdgenius.me"
+url: "http://hd-jekyll.hdgenius.me"
 
 markdown: kramdown
 theme: minima
