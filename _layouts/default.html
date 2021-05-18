@@ -27,6 +27,14 @@
 
     <meta property="og:image" content="{{ preview_image }}" />
 
+    {% if page.url %}
+        {% assign url = page.url %}
+    {% else %}
+        {% assign url = site.url %}
+    {% endif %}
+
+    <meta property="og:url" content="{{ url }}" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="/assets/hd-jekyll.css" rel="stylesheet" type="text/css">
