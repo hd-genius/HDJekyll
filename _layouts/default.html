@@ -16,7 +16,16 @@
     {% else %}
         {% assign description = site.description %}
     {% endif %}
+
     <meta property="og:description" content="{{ description }}" />
+
+    {% if page.preview_image %}
+        {% assign preview_image = page.preview_image %}
+    {% else %}
+        {% assign preview_image = site.preview_image %}
+    {% endif %}
+
+    <meta property="og:image" content="{{ preview_image }}" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
