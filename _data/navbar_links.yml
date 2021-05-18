@@ -1,0 +1,4 @@
+- url: /
+  name: Home
+- name: Some Page
+  url: /some-page
