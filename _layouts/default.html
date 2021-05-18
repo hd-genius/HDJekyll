@@ -11,6 +11,13 @@
     <title>{{ title }}</title>
     <meta property="og:title" content="{{ title }}" />
 
+    {% if page.description %}
+        {% assign description = page.description %}
+    {% else %}
+        {% assign description = site.description %}
+    {% endif %}
+    <meta property="og:description" content="{{ description }}"
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="/assets/hd-jekyll.css" rel="stylesheet" type="text/css">
