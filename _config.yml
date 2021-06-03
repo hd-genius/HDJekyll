@@ -1,17 +1,11 @@
 title: HDJekyll
 email: roythomasstewart@gmail.com
-description: A clean and minimalist theme for Jekyll.
+description: HDJekyll is a clean and minimalist theme for Jekyll. HDJekyll favors a streamlined and simple flow and page layout over complicated and busy designs.
 baseurl: ""
 url: "http://hd-jekyll.hdgenius.me"
 
 markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-
-paginate: 10
-paginate_path: "/blog/page:num/"
 
 sass:
   sass_dir: _sass
