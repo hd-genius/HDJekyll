@@ -1,0 +1,12 @@
+dialog {
+    background-color: $block-background-color;
+    border-radius: $block-border-radius;
+    padding: $block-padding $block-padding * 1.5;
+    border: 1px solid black;
+    color: $text-color;
+
+    &::backdrop {
+        background-color: #ffffff;
+        opacity: 60%;
+    }
+}
