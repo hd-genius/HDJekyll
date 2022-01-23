@@ -27,8 +27,8 @@
     transition-duration: 0.3s;
 }
 
-.nav-link:hover {
-    background-color: #00000045;
+.nav-link:hover, .nav-link:focus {
+    background-color: opacity()#00000045;
 }
 
 .nav-link:not(:last-child) {
