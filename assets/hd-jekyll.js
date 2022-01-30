@@ -1,6 +1,21 @@
 function onNavButtonClicked() {
+    toggleNavMenu();
+    updateAnimationDirection();
+}
+
+let isOpen = false;
+
+function toggleNavMenu() {
     const navMenu = document.getElementById('site-nav-menu');
-    navMenu.classList.toggle('shown');
-    const isHidden = !navMenu.classList.contains('shown');
-    navMenu.setAttribute('aria-hidden', isHidden);
+    isOpen = !isOpen;
+    navMenu.classList.toggle('shown', isOpen);
+    navMenu.setAttribute('aria-hidden', !isOpen);
+}
+
+function updateAnimationDirection() {
+    const navMenuIcon = document.querySelector('#nav-menu-button .ellipsis-icon');
+    navMenuIcon.classList.remove('animate-right', 'animate-left');
+    setTimeout(() => {
+        navMenuIcon.classList.add(isOpen ? 'animate-right' : 'animate-left');
+    }, 0);
 }

@@ -1,4 +1,10 @@
 <header id="site-header" class="block-element" aria-label="site header">
-    <span class="material-icons" id="nav-menu-button" onclick="onNavButtonClicked()" aria-label="Toggle navigation menu" aria-controls="site-nav-menu" role="button">menu</span>
+    <button id="nav-menu-button" onclick="onNavButtonClicked()" aria-controls="site-nav-menu" aria-label="Toggle navigation menu">
+        <svg class="ellipsis-icon">
+            <circle class="ellipsis-dot"/>
+            <circle class="ellipsis-dot"/>
+            <circle class="ellipsis-dot"/>
+        </svg>
+    </button>
     <div id="site-header-title">{{ site.title }}</div>
 </header>

@@ -12,12 +12,75 @@
     font-size: 2em;
 }
   
+$bounce-spacing: 100ms;
+
 #nav-menu-button {
     font-size: 3rem;
     margin: 0;
     margin-right: 1rem;
+    background: none;
+    border: none;
+    align-self: stretch;
   
     &:hover {
         cursor: pointer;
+    }
+}
+
+.ellipsis-icon {
+    $dot-radius: 7;
+    $dot-diameter: $dot-radius * 2;
+    $dot-spacing: 7;
+    $dot-offset: $dot-diameter + $dot-spacing;
+
+    height: 20;
+    width: 100;
+    overflow: visible;
+
+    .ellipsis-dot {
+        --dot-index: 0;
+        position: relative;
+        stroke: black;
+        fill: white;
+        stroke-width: 2;
+        r: $dot-radius;
+        cy: 10px;
+        cx: calc(#{$dot-offset} * var(--dot-index) + #{$dot-radius});
+
+        &:nth-child(2) {
+            --dot-index: 1;
+        }
+
+        &:nth-child(3) {
+            --dot-index: 2;
+        }
+    }
+
+    &.animate-right .ellipsis-dot {
+        animation-name: bounce;
+        animation-duration: 200ms;
+        animation-delay: calc(#{$bounce-spacing} * var(--dot-index));
+    }
+
+    &.animate-left .ellipsis-dot {
+        animation-name: bounce;
+        animation-duration: 200ms;
+        animation-delay: calc(#{$bounce-spacing * 3} - #{$bounce-spacing} * var(--dot-index));
+    }
+}
+
+@keyframes bounce {
+    $bounce-height: 0.3rem;
+
+    from {
+        cy: 10px;
+    }
+
+    50% {
+        cy: 0;
+    }
+
+    to {
+        cy: 10px;
     }
 }
